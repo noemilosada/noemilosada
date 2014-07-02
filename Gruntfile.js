@@ -8,26 +8,39 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     /* JSHINT - syntax checking
-    ------------------------------------------ */
+    --------------------------------------------- */
     jshint: {
-      all: ['Gruntfile.js', 'assets/js/**/*.js' ]
+      all: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ]
     },
 
+    /* CLEAN - remove files before minification
+    --------------------------------------------- */
+    clean: ['assets/css/*.css', 'assets/js/*.min.js'],
+
     /* LESS - files from less to css
-    ------------------------------------------ */
+    --------------------------------------------- */
     less: {
       production: {
-        options: {
-          cleancss: true
-        },
         files: {
           "assets/css/theme.css": "assets/less/theme.less"
         } 
       }
     },
 
+    /* CSSMIN - minify css files
+    --------------------------------------------- */
+    cssmin: {
+        minify: {
+            expand: true,
+            cwd:'assets/css/',
+            src: ['*.css', '!/.min.css'],
+            dest:'assets/css/',
+            ext:'.min.css'
+        }
+    },
+
     /* UGLIFY - minify js files
-    ------------------------------------------ */
+    --------------------------------------------- */
     uglify: {
       options: {
         mangle: false
@@ -45,13 +58,17 @@ module.exports = function(grunt) {
    * Load plugin tasks
    */
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   /**
    * Register tasks
    */
-  grunt.registerTask('build', ['jshint', 'less', 'uglify']);
+  grunt.registerTask('build', ['jshint', 'clean', 'less', 'cssmin', 'uglify']);
+  grunt.registerTask('css', ['clean', 'less', 'cssmin']);
+  grunt.registerTask('js', ['jshint', 'clean', 'uglify']);
 
 // END Grunt module
 };

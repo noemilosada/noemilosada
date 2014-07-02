@@ -1,1 +1,15 @@
-.iconsTest a{color:red}.menuTest a{color:#00f}
+/**
+ * Test
+ */
+/**
+ * Test
+ */
+.iconsTest a {
+  color: red;
+}
+/**
+ * Test
+ */
+.menuTest a {
+  color: blue;
+}
