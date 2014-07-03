@@ -2,6 +2,11 @@
  * Test
  */
 /**
+ * Variables
+ */
+/** Colors */
+/** Shadows */
+/**
  * Common Styles
  */
 body {
@@ -28,6 +33,22 @@ body {
 .navbar .container {
   margin: 0 auto;
 }
+.main-nav {
+  background-color: #3399cc;
+  border-radius: 0 0 10px 10px;
+}
+.main-nav .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.main-nav .nav li a,
+.main-nav .navbar-brand {
+  color: #ffffff;
+  text-shadow: 0 0 0 transparent;
+}
+.main-nav .nav > li > a:hover,
+.main-nav .nav > li > a:focus {
+  background: #297aa3;
+}
 /** Medium Devices (Desktops) */
 @media (min-width: 992px) {
   .navbar,
@@ -40,5 +61,9 @@ body {
   .navbar,
   .container {
     width: 90%;
+  }
+  .navbar-collapse {
+    box-shadow: 0 0 0 transparent;
+    border-top: 1px solid #ffffff;
   }
 }

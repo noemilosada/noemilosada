@@ -8,6 +8,29 @@
   margin: 0 auto;
 }
 
+.main-nav {
+  background-color: @main-color;
+  border-radius: 0 0 10px 10px;
+
+  .navbar-toggle .icon-bar {
+    background-color: @secondary-color;
+  }
+
+  .nav li a,
+  .navbar-brand {
+    color: @secondary-color;
+    text-shadow: @no-text-shadow;
+  }
+
+  .nav > li > a{
+    &:hover,
+    &:focus {
+      background: @dark-color;
+    }
+  }
+}
+
+
 /** Medium Devices (Desktops) */
 @media (min-width: 992px) {
   .navbar,
@@ -21,5 +44,10 @@
   .navbar,
   .container {
     width: 90%;
+  }
+
+  .navbar-collapse {
+    box-shadow: @no-box-shadow;
+    border-top: 1px solid @secondary-color;
   }
 }
