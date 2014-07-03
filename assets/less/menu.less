@@ -1,8 +1,25 @@
 /**
- * Test
+ * Menu styles - Main navigation
  */
-.menuTest {
-  a {
-    color: blue;
+
+/** All Devices **/
+.navbar,
+.navbar .container {
+  margin: 0 auto;
+}
+
+/** Medium Devices (Desktops) */
+@media (min-width: 992px) {
+  .navbar,
+  .navbar .container {
+    width: 960px;
+  }
+}
+
+/** Small Devices (Tablets) */
+@media (max-width: 991px) {
+  .navbar,
+  .container {
+    width: 90%;
   }
 }
