@@ -25,14 +25,10 @@ body {
   font-weight: normal;
   line-height: 30px;
   margin: 0;
-  padding-top: 70px;
 }
 /**
- * Test
+ * Icons
  */
-.iconsTest a {
-  color: red;
-}
 /**
  * Menu styles - Main navigation
  */
@@ -59,6 +55,7 @@ body {
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   -o-transition: background 0.2s;
+  -ms-transition: background 0.2s;
   transition: background 0.2s;
 }
 .main-nav .nav > li > a:hover,
@@ -100,4 +97,65 @@ body {
     color: #ffffff;
     background: #ababab;
   }
+}
+/**
+ * Jumbotron Styles
+ */
+/** Stack image **/
+.stack {
+  position: relative;
+  z-index: 10;
+}
+.stack img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border: 5px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.stack img:hover {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.stack:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  border: 5px solid #ffffff;
+  top: 0;
+  z-index: -10;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
 }

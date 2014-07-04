@@ -6,5 +6,33 @@
   -webkit-transition: @properties  @seconds;
   -moz-transition: @properties  @seconds;
   -o-transition: @properties  @seconds;
+  -ms-transition: @properties  @seconds;
   transition: @properties  @seconds;
+}
+
+.transform(@properties) {
+  -webkit-transform: @properties;
+  -moz-transform: @properties;
+  -o-transform: @properties;
+  -ms-transform: @properties;
+  transform: @properties;
+}
+
+.box-shadow(@values, @color) {
+  -webkit-box-shadow: @values @color;
+  -moz-box-shadow: @values @color;
+  box-shadow: @values @color;
+}
+
+.box-sizing(@properties) {
+  -webkit-box-sizing: @properties;
+  -moz-box-sizing: @properties;
+  box-sizing: @properties;
+}
+
+.border-radius(@values) {
+  -webkit-border-radius: @values;
+  -moz-border-radius: @values;
+  -o-border-radius: @values;
+  border-radius: @values;
 }
