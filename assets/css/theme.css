@@ -1,11 +1,19 @@
 /**
  * Test
+ *
+ * Extra small devices Phones (<768px)
+ * Small devices Tablets (≥768px)
+ * Medium devices Desktops (≥992px)
+ * Large devices Desktops (≥1200px)
  */
 /**
  * Variables
  */
 /** Colors */
 /** Shadows */
+/**
+ * Mixins
+ */
 /**
  * Common Styles
  */
@@ -34,36 +42,62 @@ body {
   margin: 0 auto;
 }
 .main-nav {
-  background-color: #3399cc;
+  background-color: #f5f5f5;
   border-radius: 0 0 10px 10px;
 }
 .main-nav .navbar-toggle .icon-bar {
-  background-color: #ffffff;
+  background-color: #555555;
 }
 .main-nav .nav li a,
 .main-nav .navbar-brand {
-  color: #ffffff;
+  color: #555555;
   text-shadow: 0 0 0 transparent;
+  white-space: nowrap;
+}
+.main-nav .nav > li > a {
+  padding: 10px 5px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
 }
 .main-nav .nav > li > a:hover,
 .main-nav .nav > li > a:focus {
-  background: #297aa3;
+  background: transparent;
 }
 /** Medium Devices (Desktops) */
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .navbar,
   .navbar .container {
     width: 960px;
   }
 }
-/** Small Devices (Tablets) */
-@media (max-width: 991px) {
+/** Small Devices (Tablets and Mobiles) */
+@media only screen and (max-width: 991px) {
   .navbar,
   .container {
     width: 90%;
   }
+}
+/** Tablets and Desktops */
+@media only screen and (min-width: 768px) {
+  .main-nav .nav > li > a:hover,
+  .main-nav .nav > li > a:focus {
+    color: #999999;
+    border-top: 3px solid #3399cc;
+    text-shadow: 0 0 10px #ffffff;
+    padding: 7px 5px 8px;
+  }
+}
+/** Extra Small Devices (Mobiles) */
+@media only screen and (max-width: 767px) {
   .navbar-collapse {
     box-shadow: 0 0 0 transparent;
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid #555555;
+  }
+  .main-nav .nav > li > a:hover,
+  .main-nav .nav > li > a:focus {
+    color: #ffffff;
+    background: #555555;
   }
 }

@@ -9,7 +9,7 @@
 }
 
 .main-nav {
-  background-color: @main-color;
+  background-color: @nav-bkg;
   border-radius: 0 0 10px 10px;
 
   .navbar-toggle .icon-bar {
@@ -20,34 +20,74 @@
   .navbar-brand {
     color: @secondary-color;
     text-shadow: @no-text-shadow;
+    white-space: nowrap;
   }
+  .nav > li > a {
+    padding: 10px 5px;
+    .transition(background, 0.2s);
 
-  .nav > li > a{
     &:hover,
     &:focus {
-      background: @dark-color;
+      background: transparent;
     }
   }
 }
 
 
 /** Medium Devices (Desktops) */
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
+
   .navbar,
   .navbar .container {
     width: 960px;
   }
+
 }
 
-/** Small Devices (Tablets) */
-@media (max-width: 991px) {
+/** Small Devices (Tablets and Mobiles) */
+@media only screen and (max-width: 991px) {
+
   .navbar,
   .container {
     width: 90%;
   }
 
+}
+
+/** Tablets and Desktops */
+@media only screen and (min-width: 768px) {
+
+  .main-nav {
+    .nav > li > a {
+      &:hover,
+      &:focus {
+        color: @hover-text;
+        border-top: 3px solid @main-color;
+        text-shadow: 0 0 10px @clean-color;
+        padding: 7px 5px 8px;
+      }
+    }
+  }
+
+}
+
+/** Extra Small Devices (Mobiles) */
+@media only screen and (max-width: 767px) {
+
   .navbar-collapse {
     box-shadow: @no-box-shadow;
     border-top: 1px solid @secondary-color;
   }
+
+  .main-nav {
+    .nav > li > a {
+      &:hover,
+      &:focus {
+        color: @clean-color;
+        background: @secondary-color;
+      }
+    }
+  }
+
 }
+
