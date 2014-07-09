@@ -42,13 +42,18 @@
     width: 960px;
   }
 
+  .nav-justified {
+    margin: 0 auto;
+    width: 80%;
+  }
+
 }
 
 /** Small Devices (Tablets and Mobiles) */
 @media only screen and (max-width: 991px) {
 
   .navbar,
-  .container {
+  .navbar .container {
     width: 90%;
   }
 
@@ -84,7 +89,7 @@
       &:hover,
       &:focus {
         color: @clean-color;
-        background: @dark-bkg;
+        background: @secondary-color;
       }
     }
   }
