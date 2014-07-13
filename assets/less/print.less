@@ -1,0 +1,49 @@
+/**
+ * Print Styles
+ */
+@media print {
+
+  /** Common */
+  a[href]:after {
+    content: none !important;
+  }
+
+  .block-title {
+    text-align: left;
+
+    .coloured-text {
+      display: inline;
+    }
+  }
+
+  /** Jumbotron */
+  .jumbotron {
+    margin-bottom: 10px;
+
+    h1 {
+      font-size: 40px;
+
+      small {
+        font-size: @standard-font;
+      }
+    }
+
+    p {
+      font-size: @main-font;
+    }
+  }
+
+  /** About me */
+  #social {
+
+    li {
+      a {
+        i {
+          display: none !important;
+        }
+      }
+    }
+
+  }
+
+}

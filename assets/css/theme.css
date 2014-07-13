@@ -41,6 +41,20 @@ body {
   border-left: 4px solid #333333;
   padding-left: 10px;
 }
+/** Small Devices (Tablets and Mobiles) */
+@media only screen and (max-width: 991px) {
+  .block-title {
+    border-bottom: 4px solid #333333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .content-divider {
+    border: 0;
+  }
+  .coloured-text {
+    display: inline;
+  }
+}
 /** Medium Devices (Desktops) */
 @media only screen and (min-width: 992px) {
   .container {
@@ -249,7 +263,8 @@ body {
 /** Jumbotron (Hero unit) */
 .jumbotron {
   background-color: #3399cc;
-  padding-top: 100px;
+  padding-top: 85px;
+  padding-bottom: 15px;
 }
 .jumbotron h1 {
   color: #ffffff;
@@ -288,20 +303,28 @@ body {
 /**
  * Social
  */
+#social {
+  padding: 0;
+}
+#social ul {
+  padding: 0;
+}
 #social li {
   float: left;
   list-style-type: none;
   margin: 0 5px 5px 0;
   padding: 0;
-  width: 48%;
+  width: 49%;
+}
+#social li:nth-child(2n) {
+  margin-right: 0;
 }
 #social li a {
   background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
   color: #555555;
   display: block;
   left: 0;
-  padding: 10px;
+  padding: 5px 10px;
   position: relative;
   text-decoration: none;
   -webkit-border-radius: 5px;
@@ -323,4 +346,56 @@ body {
   height: 24px;
   vertical-align: middle;
   width: 24px;
+}
+/** Extra Small Devices (Phones) */
+@media only screen and (max-width: 520px) {
+  .info {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  #social {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #social li {
+    margin: 0 0 5px;
+    line-height: 18px;
+    width: 100%;
+  }
+  #social li a {
+    padding: 5px;
+  }
+}
+/**
+ * Print Styles
+ */
+@media print {
+  /** Common */
+  a[href]:after {
+    content: none !important;
+  }
+  .block-title {
+    text-align: left;
+  }
+  .block-title .coloured-text {
+    display: inline;
+  }
+  /** Jumbotron */
+  .jumbotron {
+    margin-bottom: 10px;
+  }
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+  .jumbotron h1 small {
+    font-size: 16px;
+  }
+  .jumbotron p {
+    font-size: 15px;
+  }
+  /** About me */
+  #social li a i {
+    display: none !important;
+  }
 }
