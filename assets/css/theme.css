@@ -412,6 +412,27 @@ em {
   border-color: #3399cc;
 }
 /**
+ * Footer Styles
+ */
+footer.well {
+  margin: 0;
+  text-align: center;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+footer ul {
+  margin-bottom: 30px;
+}
+footer ul li {
+  display: inline;
+  margin: 0 10px 0;
+}
+footer ul li a:hover {
+  text-decoration: none;
+}
+/**
  * Print Styles
  */
 @media print {
