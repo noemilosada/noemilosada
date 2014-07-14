@@ -8,6 +8,8 @@
  */
 /**
  * Variables
+ *
+ * TODO: Improve color names
  */
 /** Colors */
 /** Shadows */
@@ -43,7 +45,7 @@ body {
   padding-left: 10px;
 }
 .col-md-12 {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 dd {
   line-height: 30px;
@@ -64,6 +66,9 @@ em {
   }
   .coloured-text {
     display: inline;
+  }
+  .col-md-12 {
+    margin-bottom: 40px;
   }
 }
 /** Medium Devices (Desktops) */
@@ -274,8 +279,9 @@ em {
 /** Jumbotron (Hero unit) */
 .jumbotron {
   background-color: #3399cc;
-  padding-top: 85px;
-  padding-bottom: 15px;
+  margin-bottom: 60px;
+  padding-top: 90px;
+  padding-bottom: 40px;
 }
 .jumbotron h1 {
   color: #ffffff;
@@ -304,7 +310,9 @@ em {
 /** Small Devices (Tablets and Mobiles) */
 @media only screen and (max-width: 991px) {
   .jumbotron {
+    margin-bottom: 40px;
     padding-top: 65px;
+    padding-bottom: 15px;
     text-align: center;
   }
   .jumbotron h1 small {
@@ -377,6 +385,23 @@ em {
   #social li a {
     padding: 5px;
   }
+}
+/**
+ * Some Works
+ */
+.some-works {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+.some-works li {
+  border: 1px solid #cccccc;
+  display: inline-block;
+  margin: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 /**
  * Print Styles
