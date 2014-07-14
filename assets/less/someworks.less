@@ -11,7 +11,12 @@
     display: inline-block;
     margin: 5px;
 
+    .transition(border, 0.5s);
     .border-radius(2px);
+
+    &:hover {
+      border-color: @main-color;
+    }
   }
 
 }
