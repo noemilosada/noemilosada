@@ -108,11 +108,6 @@ em {
 .icons-user {
   background-position: 0 0;
 }
-.icons-phone {
-  background-position: -43px 0;
-  width: 10px;
-  margin-left: 3px;
-}
 .icons-cake {
   background-position: 0 -17px;
   width: 14px;
@@ -123,16 +118,6 @@ em {
 .icons-envelope {
   background-position: -15px -22px;
   height: 11px;
-}
-.icons-women {
-  background-position: -17px -2px;
-  width: 12px;
-  height: 14px;
-}
-.icons-men {
-  background-position: -30px -3px;
-  width: 12px;
-  height: 13px;
 }
 .icons-ln {
   background-position: 0 -35px;
@@ -145,10 +130,6 @@ em {
 }
 .icons-gh {
   background-position: -27px -60px;
-}
-.icon-download-alt {
-  margin-left: 2px;
-  margin-top: 3px;
 }
 /**
  * Menu styles - Main navigation
@@ -234,8 +215,8 @@ em {
 }
 .stack img {
   border: 5px solid #ffffff;
-  height: auto;
-  max-width: 100%;
+  height: 130px;
+  width: 130px;
   vertical-align: bottom;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -419,6 +400,10 @@ em {
 }
 .some-works li:hover {
   border-color: #3399cc;
+}
+.some-works li img {
+  height: 91px;
+  width: 210px;
 }
 /**
  * Footer Styles
