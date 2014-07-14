@@ -153,6 +153,7 @@ em {
 .main-nav {
   background-color: #f5f5f5;
   border-radius: 0 0 10px 10px;
+  min-height: 30px;
 }
 .main-nav .navbar-toggle .icon-bar {
   background-color: #555555;
@@ -357,7 +358,7 @@ em {
   transition: all ease 1s;
 }
 #social li a:hover {
-  background-color: #ababab;
+  background-color: #9ecee6;
   color: #000000;
 }
 #social [class^="icons-"],
@@ -424,13 +425,20 @@ footer.well {
 }
 footer ul {
   margin-bottom: 30px;
+  padding: 0;
 }
 footer ul li {
   display: inline;
-  margin: 0 10px 0;
+}
+footer ul li a {
+  color: #ffffff;
 }
 footer ul li a:hover {
+  color: #f5f5f5;
   text-decoration: none;
+  -webkit-text-shadow: 0 0 3px #000000;
+  -moz-text-shadow: 0 0 3px #000000;
+  text-shadow: 0 0 3px #000000;
 }
 /**
  * Print Styles
