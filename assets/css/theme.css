@@ -58,6 +58,10 @@ dd {
 em {
   color: #999999;
 }
+.glyphicon {
+  color: #000000;
+  margin-right: 5px;
+}
 /** Small Devices (Tablets and Mobiles) */
 @media only screen and (max-width: 991px) {
   .block-title {
