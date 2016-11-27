@@ -18,7 +18,9 @@
 
   /** Jumbotron */
   .jumbotron {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+    border-bottom: 4px solid @dark-grey;
 
     h1 {
       font-size: 40px;
@@ -31,19 +33,17 @@
     p {
       font-size: @main-font;
     }
+
+    .lead {
+      display: none;
+    }
   }
 
   /** About me */
-  #social {
-
-    li {
-      a {
-        i {
-          display: none !important;
-        }
-      }
-    }
-
+  .section-about,
+  .section-works,
+  footer {
+    display: none;
   }
 
 }
