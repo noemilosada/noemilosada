@@ -371,14 +371,14 @@ em {
   }
 }
 /**
- * Some Works
+ * Works
  */
-.some-works {
+.works {
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
-.some-works li {
+.works li {
   border: 1px solid #cccccc;
   display: inline-block;
   margin: 5px;
@@ -392,10 +392,10 @@ em {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-.some-works li:hover {
+.works li:hover {
   border-color: #3399cc;
 }
-.some-works li img {
+.works li img {
   height: 91px;
   width: 210px;
 }
